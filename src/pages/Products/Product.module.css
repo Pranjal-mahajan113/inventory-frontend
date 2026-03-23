@@ -1,0 +1,310 @@
+.page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top: title + search one line */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.searchWrap {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.searchInput {
+  padding: 0.5rem 1rem 0.5rem 2.35rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  min-width: 220px;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #6366f1;
+}
+
+/* Box 1: Overall Inventory */
+.inventoryBox {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 0 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e5e7eb;
+}
+
+.inventoryHeading {
+  margin: 0 0 1rem;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.inventoryRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+  .inventoryRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.inventoryCell {
+  padding: 0 1.25rem;
+  border-right: 1px solid #e5e7eb;
+}
+
+.inventoryCell:last-child {
+  border-right: none;
+}
+
+.inventoryLabel {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.inventoryValue {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.inventorySub {
+  margin: 0.35rem 0 0;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.inventorySubMoney {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Box 2: Table */
+.tableBox {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+}
+
+.tableHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tableTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.addBtn {
+  padding: 0.45rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background: #111827;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tableScroll {
+  overflow-x: auto;
+  max-height: 350px; 
+  overflow-y: auto; 
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.dataTable thead {
+  background: #e8e4f5;
+}
+
+.dataTable th,
+.dataTable td {
+  padding: 0.65rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.dataTable th {
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.8125rem;
+}
+
+.inStock {
+  color: #059669;
+  font-weight: 600;
+}
+
+.lowStock {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.outStock {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.pagination button {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.pageInfo {
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+/* Modal (same file — simple) */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.modalPanel {
+  width: 100%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.35rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modalTitle {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.modalSub {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.modalInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.modalInput:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.modalMeta {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.btnGhost {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btnDark {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background: #111827;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

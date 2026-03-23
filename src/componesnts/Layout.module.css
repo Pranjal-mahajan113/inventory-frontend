@@ -1,0 +1,18 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  background: #424457;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 1.5rem 1.75rem 2rem;
+  background: #424457;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+}
