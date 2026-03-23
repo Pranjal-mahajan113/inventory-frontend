@@ -14,7 +14,7 @@ A full-stack MERN application to manage products and generate invoices with user
 ### Frontend
 - React (Vite)
 - Axios
-- CSS / Tailwind (if used)
+- CSS 
 
 ### Backend
 - Node.js
